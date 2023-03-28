@@ -1,0 +1,185 @@
+%flex-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-page *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+%mobile-heading{
+    font-size: 50px;
+    line-height: 56.8px;
+    margin-bottom: $margin-buttom-10;
+}
+
+%mobile-paragraph{
+    font-weight: $font-weigth-400;
+    line-height: 30px;
+    font-size: $font-size-18 - 2;
+    margin-bottom: $margin-buttom-20 + 15;
+}
+
+%mobile-button{
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.landing-page{
+    @extend %flex-items;
+    height: 100vh;
+    width: 100%;
+
+    .landing-contents{
+        @extend %flex-items;
+        width: 90%;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 30px;
+
+        .landing-text{
+            width: min(531px, 50%);
+
+            h1{
+                font-family: $font-cabinet-grotesk;
+                font-size: 64px;
+                font-weight: $font-weigth-700;
+                line-height: 76.8px;
+                color: $light-black;
+                margin-bottom: $margin-buttom-10 + 6;
+
+                span{
+                    color: $main-color;
+                }
+            }
+
+            .landing-paragraph{
+                font-weight: $font-weigth-400;
+                line-height: 30px;
+                color: $light-black;
+                font-size: $font-size-18 + 2;
+                font-family: $font-inter;
+                margin-bottom: $margin-buttom-20 + 15;
+            }
+
+            .buttons{
+                display: flex;
+                gap: 20px;
+            }
+        }
+
+        .landing-img-container{
+            @extend %flex-items;
+            align-items: flex-end;
+            justify-content: flex-start;
+            position: relative;
+            width: min(612px);
+            height: 70vh;
+            margin-top: 100px;
+
+    
+            .landing-img{
+                width: min(555px, 90%);
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
+// Media Queries
+
+@media (min-width: 870px) and (max-width: 1030px){
+    .landing-page{
+
+        .landing-contents{
+    
+            .landing-text{
+                
+                h1{
+                    @extend %mobile-heading;
+                }
+
+                .landing-paragraph{
+                    @extend %mobile-paragraph;
+                }
+
+                .buttons{
+
+                    .button{
+                      @extend %mobile-button;
+                    }
+                }
+            }
+
+            .landing-img-container{
+                height: 60vh;
+    
+                .landing-img{
+                    width: min(555px, 90%);
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: -1;
+                }
+
+                .landing-shape{
+                    z-index: -2 ;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 870px) {
+    .landing-page{
+
+        .landing-contents{
+
+            .landing-text{
+                width: 100%;
+            }
+
+            .landing-img-container{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .landing-page{
+
+        .landing-contents{
+
+            .landing-text{
+                h1{
+                    font-size: 50px;
+                    line-height: 56.8px;
+                    margin-bottom: $margin-buttom-10;
+                }
+
+                .landing-paragraph{
+                    font-weight: $font-weigth-400;
+                    line-height: 30px;
+                    font-size: $font-size-18 - 2;
+                    margin-bottom: $margin-buttom-20 + 15;
+                }
+
+                .buttons{
+
+                    .button{
+                        padding: 6px 12px;
+                        border-radius: 4px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

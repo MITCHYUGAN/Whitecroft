@@ -1,5 +1,6 @@
 import React from "react"
 import logo from "./Images/Whitecroft.svg"
+import { useState } from "react"
 
 // const header = HeaderCss.header
 // const headerWrapper = HeaderCss.headerWrapper
@@ -7,11 +8,14 @@ import logo from "./Images/Whitecroft.svg"
 
 
 const Header = () =>{
+
+    const [openNav, setOpenNav] = useState("nav")
+
     return(
         <header className="header">
             <div className="headerWrapper">
             <img src={logo} alt="" />
-                <nav className="">
+                <nav className={openNav}>
                     <ul>
                         <li>
                             <a href="/">Home</a>
@@ -29,8 +33,17 @@ const Header = () =>{
                             <a href="#clients">Clients</a>
                         </li>
                     </ul>
-                    <button className="workBtn">Work with us</button>
+                    <button className="button">Work with us</button>
                 </nav>
+                <i class='bx bx-menu' 
+                    onClick={() => {
+                        if(openNav === "nav"){
+                            setOpenNav('openNav')
+                        } else{
+                            setOpenNav('nav')
+                        }
+                    }
+                }></i>
             </div>
         </header>
     )
