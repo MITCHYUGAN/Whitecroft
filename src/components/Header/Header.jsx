@@ -1,16 +1,15 @@
 import React from "react"
 import logo from "./Images/Whitecroft.svg"
-import HeaderCss from "./Header.module.css"
 
-const header = HeaderCss.header
-const headerWrapper = HeaderCss.headerWrapper
-const workBtn = HeaderCss.workBtn
+// const header = HeaderCss.header
+// const headerWrapper = HeaderCss.headerWrapper
+// const workBtn = HeaderCss.workBtn
 
 
 const Header = () =>{
     return(
-        <header className={header}>
-            <div className={headerWrapper}>
+        <header className="header">
+            <div className="headerWrapper">
             <img src={logo} alt="" />
                 <nav className="">
                     <ul>
@@ -30,7 +29,7 @@ const Header = () =>{
                             <a href="#clients">Clients</a>
                         </li>
                     </ul>
-                    <button className={workBtn}>Work with us</button>
+                    <button className="workBtn">Work with us</button>
                 </nav>
             </div>
         </header>
