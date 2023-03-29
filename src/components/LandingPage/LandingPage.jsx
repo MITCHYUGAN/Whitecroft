@@ -18,7 +18,7 @@ const LandingPage = () => {
                     <button className='button'>Work with us</button>
                     <button className='button button-outline'>
                         <p>Portfolio reel</p>
-                         <img src={PlayOutline} alt="" />
+                         <img className='playOutline' src={PlayOutline} alt="" />
                     </button>
                 </div>
             </div>

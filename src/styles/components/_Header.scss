@@ -42,7 +42,7 @@
             }
         }
 
-        .bx-menu{
+        .bx-menu, .bx-x{
             display: none;
         }
     }
@@ -70,6 +70,7 @@
                 justify-content: center;
                 gap: 50px;
                 transform: translateX(-100000px);
+                transition: 0.5s ease-in;
 
                 ul{
                     display: flex;
@@ -86,37 +87,10 @@
             }
 
             .openNav{
-                height: 100vh;
-                width: 250px;
-                background-color: white;
-                box-shadow: 0 0 0 10000px rgba(0, 0, 0, 0.296);
-                top: 0;
-                right: 0;
-                display: flex;
-                flex-direction: column;
-                position: fixed;
-                justify-content: center;
-                align-items: center;
-                gap: 50px;
-                transform: translateX(-100000px);
-                // z-index: 22222;
-
-                ul{
-                    display: flex;
-                    align-items: center;
-                    gap: 30px;
-                    flex-direction: column;
-    
-                    li a{
-                        color: $black;
-                        font-weight: $font-weigth-400;
-                        font-size: $font-size-18;
-                    }
-                }
                 transform: translateX(0);
             }
     
-            .bx-menu{
+            .bx-menu, .bx-x{
                 display: block;
                 font-size: $font-size-20 + 3;
                 z-index: 1;

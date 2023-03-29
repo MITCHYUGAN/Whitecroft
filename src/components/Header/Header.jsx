@@ -10,6 +10,17 @@ import { useState } from "react"
 const Header = () =>{
 
     const [openNav, setOpenNav] = useState("nav")
+    const [menu, setMenu] = useState("bx-menu")
+    const toggleNav = () => {
+        if(openNav === "nav" && menu === "bx-menu"){
+            setOpenNav('nav openNav')
+            setMenu("bx-x")
+        } else{
+            setOpenNav('nav')
+            setMenu('bx-menu')
+        }
+        // openNav === "nav" ? setOpenNav('nav openNav') : setOpenNav('nav')
+    }
 
     return(
         <header className="header">
@@ -35,15 +46,7 @@ const Header = () =>{
                     </ul>
                     <button className="button">Work with us</button>
                 </nav>
-                <i class='bx bx-menu' 
-                    onClick={() => {
-                        if(openNav === "nav"){
-                            setOpenNav('openNav')
-                        } else{
-                            setOpenNav('nav')
-                        }
-                    }
-                }></i>
+                <i class={`bx ${menu}`} onClick={toggleNav}></i>
             </div>
         </header>
     )
