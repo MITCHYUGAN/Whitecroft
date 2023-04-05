@@ -1,5 +1,6 @@
 import React from "react"
 import logo from "./Images/Whitecroft.svg"
+import { useState } from "react"
 
 // const header = HeaderCss.header
 // const headerWrapper = HeaderCss.headerWrapper
@@ -7,11 +8,25 @@ import logo from "./Images/Whitecroft.svg"
 
 
 const Header = () =>{
+
+    const [openNav, setOpenNav] = useState("nav")
+    const [menu, setMenu] = useState("bx-menu")
+    const toggleNav = () => {
+        if(openNav === "nav" && menu === "bx-menu"){
+            setOpenNav('nav openNav')
+            setMenu("bx-x")
+        } else{
+            setOpenNav('nav')
+            setMenu('bx-menu')
+        }
+        // openNav === "nav" ? setOpenNav('nav openNav') : setOpenNav('nav')
+    }
+
     return(
         <header className="header">
             <div className="headerWrapper">
             <img src={logo} alt="" />
-                <nav className="">
+                <nav className={openNav}>
                     <ul>
                         <li>
                             <a href="/">Home</a>
@@ -29,8 +44,9 @@ const Header = () =>{
                             <a href="#clients">Clients</a>
                         </li>
                     </ul>
-                    <button className="workBtn">Work with us</button>
+                    <button className="button">Work with us</button>
                 </nav>
+                <i class={`bx ${menu}`} onClick={toggleNav}></i>
             </div>
         </header>
     )

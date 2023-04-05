@@ -1,0 +1,19 @@
+.button{
+    background-color: $main-color;
+    border: none;
+    color: $white;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: $font-satoshi;
+}
+
+.button-outline{
+    background-color: transparent;
+    border: 1px solid $main-color;
+    color: $main-color;
+    font-family: $font-satoshi;
+    @extend %flex-items;
+    gap: 10px;
+}
