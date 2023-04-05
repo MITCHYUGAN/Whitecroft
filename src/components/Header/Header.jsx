@@ -10,7 +10,7 @@ const Header = () =>{
         if(openNav === "nav" && menu === "bx-menu"){
             setOpenNav('nav openNav')
             setMenu("bx-x")
-        } else{ 
+        } else{  
             setOpenNav('nav')
             setMenu('bx-menu')
         }
