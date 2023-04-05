@@ -46,7 +46,7 @@ const Header = () =>{
                     </ul>
                     <button className="button">Work with us</button>
                 </nav>
-                <i class={`bx ${menu}`} onClick={toggleNav}></i>
+                <i className={`bx ${menu}`} onClick={toggleNav}></i>
             </div>
         </header>
     )
