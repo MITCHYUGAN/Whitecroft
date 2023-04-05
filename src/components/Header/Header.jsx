@@ -2,11 +2,6 @@ import React from "react"
 import logo from "./Images/Whitecroft.svg"
 import { useState } from "react"
 
-// const header = HeaderCss.header
-// const headerWrapper = HeaderCss.headerWrapper
-// const workBtn = HeaderCss.workBtn
-
-
 const Header = () =>{
 
     const [openNav, setOpenNav] = useState("nav")
@@ -15,11 +10,10 @@ const Header = () =>{
         if(openNav === "nav" && menu === "bx-menu"){
             setOpenNav('nav openNav')
             setMenu("bx-x")
-        } else{
+        } else{ 
             setOpenNav('nav')
             setMenu('bx-menu')
         }
-        // openNav === "nav" ? setOpenNav('nav openNav') : setOpenNav('nav')
     }
 
     return(
@@ -46,7 +40,7 @@ const Header = () =>{
                     </ul>
                     <button className="button">Work with us</button>
                 </nav>
-                <i class={`bx ${menu}`} onClick={toggleNav}></i>
+                <i className={`bx ${menu}`} onClick={toggleNav}></i>
             </div>
         </header>
     )
