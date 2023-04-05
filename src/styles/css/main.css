@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 0;
   padding: 20px 0;
@@ -84,7 +85,7 @@
     cursor: pointer;
   }
 }
-.button-outline, .landing-page .landing-contents .landing-img-container, .landing-page .landing-contents, .landing-page {
+.button-outline, .aboutsectionwrapper .aboutcontainer .About-img-container, .aboutsectionwrapper .aboutcontainer, .landing-page .landing-contents .landing-img-container, .landing-page .landing-contents, .landing-page {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -228,6 +229,65 @@
     font-size: 15px;
   }
 }
+.aboutsectionwrapper * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.aboutsectionwrapper {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1E1C1B;
+}
+.aboutsectionwrapper .aboutHeadingText {
+  color: #FC653C;
+  font-size: 64px;
+  font-family: "Cabinet Grotesk", sans-serif;
+}
+.aboutsectionwrapper .aboutcontainer {
+  width: 80%;
+  align-items: flex-end;
+  gap: 30px;
+  justify-content: space-between;
+}
+.aboutsectionwrapper .aboutcontainer .about-text {
+  width: min(615px, 50%);
+}
+.aboutsectionwrapper .aboutcontainer .about-text h1 {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 57.6px;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+.aboutsectionwrapper .aboutcontainer .about-text h1 span {
+  color: #FC653C;
+}
+.aboutsectionwrapper .aboutcontainer .about-text .about-paragraph {
+  font-weight: 400;
+  line-height: 30px;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 35px;
+}
+.aboutsectionwrapper .aboutcontainer .About-img-container {
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: min(404px, 50%);
+  margin-top: 100px;
+}
+.aboutsectionwrapper .aboutcontainer .About-img-container .About-img {
+  width: 100%;
+  top: 0;
+  right: 0;
+  display: block;
+}
+
 .button {
   background-color: #FC653C;
   border: none;
