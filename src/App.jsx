@@ -3,6 +3,7 @@ import Header from './components/Header/Header'
 import Contact from './components/Contact/Contact'
 import LandingPage from './components/LandingPage/LandingPage'
 import About from './components/About/About'
+import Services from './components/Services/Services'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <LandingPage />
       <About />
+      <Services />
     </div>
   )
 }
