@@ -1,16 +1,17 @@
+body{
+    margin: 0;
+}
+
+h1, h2, h5, p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
 @import "../Utilities/variable";
 @import "../components/Header";
 @import "../components/LandingPage";
 @import "../components/About";
 @import "../components/Services";
 @import "../Utilities/buttons";
-
-
-body{
-    margin: 0;
-}
-
-h1{
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
+@import "../components/Portfolio";
+@import "../components/CllientsFeeds";

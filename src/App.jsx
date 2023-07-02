@@ -4,6 +4,8 @@ import Contact from './components/Contact/Contact'
 import LandingPage from './components/LandingPage/LandingPage'
 import About from './components/About/About'
 import Services from './components/Services/Services'
+import Portfolio from './components/Portfolio/Portfolio'
+import ClientsFeeds from './components/ClientsFeedbacks/ClientsFeed'
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
       <LandingPage />
       <About />
       <Services />
+      <Portfolio />
+      <ClientsFeeds />
     </div>
   )
 }

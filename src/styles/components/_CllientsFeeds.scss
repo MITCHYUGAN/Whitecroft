@@ -1,0 +1,102 @@
+.clientsfeeds{
+    min-height: 100vh;
+    width: 100%;
+    font-family: $font-cabinet-grotesk;
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:  #fddbdb0a;
+
+    .clientsfeedsheadingtext{
+        color: $main-color;
+        font-size: 64px;
+        text-align: center;
+    }
+
+    .feeds{
+        width: 90%;
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+
+        .feed{
+            display: flex;
+            align-items: flex-start;
+            // width: 544px;
+            border-radius: 24px;
+            border: 0.5px solid var(--foundation-black-black-50, #E6E6E6);
+            background: $white;
+            box-shadow: 0px 16px 40px 20px rgba(252, 101, 60, 0.05);
+            padding: 44px 32px;
+            gap: 20px;
+
+            img{
+                width: 70px;
+            }
+
+            .feedcontents{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h2{
+                    font-size: 32px;
+                    color: $light-black;
+                    font-weight: 700;
+                }
+
+                h5{
+                    color: #737373;
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+
+                p{
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $light-black;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 800px) and (max-width: 1000px) {
+    .clientsfeeds{
+    
+        .feeds{
+    
+            .feed{
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 800px) {
+    .clientsfeeds{
+        .clientsfeedsheadingtext{
+            font-size: 50px;
+        }
+    
+        .feeds{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .clientsfeeds{
+    
+        .feeds{
+    
+            .feed{
+                flex-direction: column;
+            }
+        }
+    }
+}

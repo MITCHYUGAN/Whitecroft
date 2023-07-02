@@ -1,3 +1,14 @@
+body {
+  margin: 0;
+}
+
+h1, h2, h5, p {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
 .header * {
   margin: 0;
   padding: 0;
@@ -381,10 +392,103 @@
 }
 .services {
   width: 100%;
-  height: 100vh;
-  background: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Cabinet Grotesk", sans-serif;
+  padding: 80px 0;
+}
+.services .servicesWrappr {
+  width: 90%;
+}
+.services .servicesWrappr .serviceHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.services .servicesWrappr .serviceHeader h1 {
+  color: #FC653C;
+  font-weight: 700;
+  font-size: 64px;
+}
+.services .servicesWrappr .serviceHeader p {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 300;
+  line-height: 30px;
+  color: #333333;
+}
+.services .servicesWrappr .allServicesWrapper {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.services .servicesWrappr .allServicesWrapper .service {
+  width: 100%;
+  display: flex;
+  gap: 64px;
+  align-items: center;
+}
+.services .servicesWrappr .allServicesWrapper .service img {
+  width: min(50%, 395px);
+}
+.services .servicesWrappr .allServicesWrapper .service .serviceTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.services .servicesWrappr .allServicesWrapper .service .serviceTexts h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.services .servicesWrappr .allServicesWrapper .service .serviceTexts p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 34px;
+}
+.services .servicesWrappr .allServicesWrapper .service:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
+@media (min-width: 831px) and (max-width: 1000px) {
+  .services .servicesWrappr .allServicesWrapper .service .serviceTexts h1 {
+    font-size: 30px;
+  }
+  .services .servicesWrappr .allServicesWrapper .service .serviceTexts p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 830px) {
+  .services {
+    padding: 40px 0;
+  }
+  .services .servicesWrappr .serviceHeader p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .services .servicesWrappr .allServicesWrapper {
+    gap: 50px;
+  }
+  .services .servicesWrappr .allServicesWrapper .service img {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .services .servicesWrappr .allServicesWrapper .service .serviceTexts h1 {
+    font-size: 30px;
+  }
+  .services .servicesWrappr .allServicesWrapper .service .serviceTexts p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
 .button {
   background-color: #FC653C;
   border: none;
@@ -404,13 +508,152 @@
   gap: 10px;
 }
 
-body {
-  margin: 0;
+.portfolio {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #1E1C1B;
+  font-family: "Cabinet Grotesk", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0;
+}
+.portfolio .portfolioheadingtext {
+  text-align: center;
+  color: #FC653C;
+  font-size: 64px;
+  font-weight: 700;
+}
+.portfolio .portfoliosection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+.portfolio .portfoliosection .portfoliocontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  display: flex;
+  gap: 70px;
+}
+.portfolio .portfoliosection .portfoliocontent .portfoliocontenttexts {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 10px;
+  align-items: flex-start;
+}
+.portfolio .portfoliosection .portfoliocontent .portfoliocontenttexts h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.portfolio .portfoliosection .portfoliocontent .portfoliocontenttexts p {
+  color: #FDDBDB;
+  font-size: 20px;
+  line-height: 24px;
+}
+.portfolio .portfoliosection .portfoliocontent .portfoliocontenttexts a {
+  color: #FC653C;
+  font-size: 32px;
+  font-weight: 300;
+}
+.portfolio .portfoliosection .portfoliocontent img {
+  width: min(422px, 40%);
+}
+.portfolio .controllers {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.portfolio .controllers button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-h1 {
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
+@media (max-width: 800px) {
+  .portfolio .portfoliosection .portfoliocontent {
+    flex-direction: column;
+  }
+  .portfolio .portfoliosection .portfoliocontent img {
+    width: min(422px, 40%);
+  }
+}
+.clientsfeeds {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Cabinet Grotesk", sans-serif;
+  padding: 70px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(253, 219, 219, 0.0392156863);
+}
+.clientsfeeds .clientsfeedsheadingtext {
+  color: #FC653C;
+  font-size: 64px;
+  text-align: center;
+}
+.clientsfeeds .feeds {
+  width: 90%;
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+.clientsfeeds .feeds .feed {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 24px;
+  border: 0.5px solid var(--foundation-black-black-50, #E6E6E6);
+  background: white;
+  box-shadow: 0px 16px 40px 20px rgba(252, 101, 60, 0.05);
+  padding: 44px 32px;
+  gap: 20px;
+}
+.clientsfeeds .feeds .feed img {
+  width: 70px;
+}
+.clientsfeeds .feeds .feed .feedcontents {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.clientsfeeds .feeds .feed .feedcontents h2 {
+  font-size: 32px;
+  color: #333333;
+  font-weight: 700;
+}
+.clientsfeeds .feeds .feed .feedcontents h5 {
+  color: #737373;
+  font-size: 20px;
+  font-weight: 700;
+}
+.clientsfeeds .feeds .feed .feedcontents p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+  .clientsfeeds .feeds .feed {
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  .clientsfeeds .clientsfeedsheadingtext {
+    font-size: 50px;
+  }
+  .clientsfeeds .feeds {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .clientsfeeds .feeds .feed {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=main.css.map */
