@@ -2,11 +2,13 @@ body {
   margin: 0;
 }
 
-h1, h2, h5, p {
+h1, h2, h5, h3, ul, p {
   -webkit-margin-before: 0;
           margin-block-start: 0;
   -webkit-margin-after: 0;
           margin-block-end: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
 }
 
 .header * {
@@ -782,18 +784,140 @@ h1, h2, h5, p {
   background-color: white;
   display: grid;
   place-items: center;
+  font-family: "Cabinet Grotesk", sans-serif;
+  padding: 40px 0;
 }
 .footer .footerwrapper {
   width: 90%;
 }
 .footer .footerwrapper .footerheading {
-  height: 25vh;
+  min-height: 25vh;
+  margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.footer .footerwrapper .footerheading .footerheadingtexts {
+  width: 50%;
+}
+.footer .footerwrapper .footerheading .footerheadingtexts h3 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.footer .footerwrapper .footerheading .footerheadingtexts p {
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 15px;
+}
+.footer .footerwrapper .footerheading .subscribe {
+  display: flex;
   align-items: center;
+  gap: 20px;
+  width: min(50%, 500px);
+}
+.footer .footerwrapper .footerheading .subscribe input {
+  display: flex;
+  width: 100%;
+  height: 35px;
+  padding: 10px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 4px;
+  border: 1px solid #B0B0B0;
+  font-size: 18px;
+  color: #545454;
+  font-family: "Cabinet Grotesk", sans-serif;
+}
+.footer .footerwrapper .footerheading .subscribe button {
+  border-radius: 4px;
+  padding: 16px;
+  border: none;
+  background-color: #FC653C;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+}
+.footer .footerwrapper .footerheading .subscribe .subscribeicon {
+  display: none;
 }
 .footer .footerwrapper .footercontents {
-  height: 45vh;
+  min-height: 45vh;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 50px;
+}
+.footer .footerwrapper .footercontents .footercontentslogotext {
+  width: 300px;
+}
+.footer .footerwrapper .footercontents .footercontentslogotext p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 30px;
+}
+.footer .footerwrapper .footercontents .Services, .footer .footerwrapper .footercontents .company, .footer .footerwrapper .footercontents .social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  width: 190px;
+}
+.footer .footerwrapper .footercontents .Services h3, .footer .footerwrapper .footercontents .company h3, .footer .footerwrapper .footercontents .social h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #545454;
+}
+.footer .footerwrapper .footercontents .Services ul, .footer .footerwrapper .footercontents .company ul, .footer .footerwrapper .footercontents .social ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+.footer .footerwrapper .footercontents .Services ul li, .footer .footerwrapper .footercontents .company ul li, .footer .footerwrapper .footercontents .social ul li {
+  list-style-type: none;
+  font-weight: 700;
+  font-size: 20px;
+  color: #333333;
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  .footer .footerwrapper .footerheading {
+    flex-direction: column;
+  }
+  .footer .footerwrapper .footerheading .footerheadingtexts {
+    width: 70%;
+  }
+  .footer .footerwrapper .footerheading .subscribe {
+    width: 80%;
+  }
+}
+@media (max-width: 580px) {
+  .footer .footerwrapper .footerheading .footerheadingtexts {
+    width: 90%;
+  }
+  .footer .footerwrapper .footerheading .subscribe {
+    width: 100%;
+    gap: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .footer .footerwrapper .footerheading .subscribe {
+    gap: 0px;
+  }
+  .footer .footerwrapper .footerheading .subscribe button {
+    display: none;
+  }
+  .footer .footerwrapper .footerheading .subscribe .subscribeicon {
+    display: block;
+    width: 30px;
+    background-color: #FC653C;
+    height: 35px;
+    padding: 10px;
+    color: white;
+  }
 }/*# sourceMappingURL=main.css.map */

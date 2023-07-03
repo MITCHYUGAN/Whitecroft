@@ -1,4 +1,5 @@
 import logo from "./Images/Whitecroft.svg"
+import { BsSendFill } from "react-icons/bs";
 
 const Footer = () => {
     return(
@@ -7,19 +8,21 @@ const Footer = () => {
                 <div className="footerheading">
                     <div className="footerheadingtexts">
                         <h3>Sign up for our newsletter</h3>
-                        <p>Get the latest updates on Whitecroft and tips on how best to work with us Get the latest updates on Whitecroft and tips on how best to work with us</p>
+                        <p>Get the latest updates on Whitecroft and tips on how best to work with us </p>
                     </div>
-                    <div>
-                        <input type="email" placeholder="Enter youe email" />
+                    <div className="subscribe">
+                        <input type="email" placeholder="Enter your email" />
                         <button>Subscribe</button>
+                        <BsSendFill className="subscribeicon" />
                     </div>
                 </div>
                 <div className="footercontents">
-                    <div>
+                    <div className="footercontentslogotext">
                         <img src={logo} alt="" />
                         <p>Get the latest updates on Whitecroft and tips on how best to work with us</p>
                     </div>
                     <div className="Services">
+                        <h3>Services</h3>
                         <ul>
                             <li>UI/UX Design</li>
                             <li>Mobile Development</li>
@@ -28,6 +31,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="company">
+                        <h3>Company</h3>
                         <ul>
                             <li>About us</li>
                             <li>Careers</li>
@@ -36,6 +40,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="social">
+                        <h3>Social</h3>
                         <ul>
                             <li>Instagram</li>
                             <li>Twitter</li>
