@@ -1,0 +1,147 @@
+.workwithus{
+    min-height: 120vh;
+    width: 100%;
+    background-color: $black-color;
+    display: grid;
+    place-items: center;
+    font-family: $font-cabinet-grotesk;
+    position: relative;
+    overflow-y: hidden;
+
+    .vector{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .workwithuswrapper{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img{
+            width: min(50%, 590px);
+        }
+        
+        .workwithustexts{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 22px;
+
+            h1{
+                font-size: 64px;
+                font-weight: 700;
+                color: $main-color;
+            }
+
+            p{
+                color: $white;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 150%;
+            }
+
+            button{
+                padding: 16px 28px;
+                border-radius: 4px;
+                color: $white;
+                border: none;
+                background-color: $main-color;
+                font-size: 32px;
+                font-weight: 700;
+                font-family: $font-cabinet-grotesk;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .workwithuscirclegradient{
+        position: absolute;
+        right: 0;
+        bottom: -50px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: $main-color;
+        filter: blur(117.5px);
+    }
+}
+
+@media (min-width: 850px) and (max-width: 1150px) {
+    .workwithus{
+        min-height: 100vh;
+    
+        .workwithuswrapper{
+            width: 100%;
+            
+            .workwithustexts{
+                h1{
+                    font-size: 50px;
+                }
+
+                p{
+                    font-size: 20px;
+                }
+
+                button{
+                    padding: 13px 25px;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .workwithus{
+        min-height: 100vh;
+        padding: 50px 0;
+
+        .vector{
+            right: 0;
+            left: auto;
+        }
+    
+        .workwithuswrapper{
+            width: 80%;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 50px;
+            
+            img{
+                width: 60%;
+            }
+
+            .workwithustexts{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .workwithus{
+    
+        .workwithuswrapper{
+            gap: 50px;
+            
+            .workwithustexts{
+                h1{
+                    font-size: 50px;
+                }
+
+                p{
+                    font-size: 20px;
+                }
+
+                button{
+                    padding: 13px 25px;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}

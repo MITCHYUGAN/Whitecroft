@@ -656,4 +656,144 @@ h1, h2, h5, p {
   .clientsfeeds .feeds .feed {
     flex-direction: column;
   }
+}
+.workwithus {
+  min-height: 120vh;
+  width: 100%;
+  background-color: #1E1C1B;
+  display: grid;
+  place-items: center;
+  font-family: "Cabinet Grotesk", sans-serif;
+  position: relative;
+  overflow-y: hidden;
+}
+.workwithus .vector {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.workwithus .workwithuswrapper {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.workwithus .workwithuswrapper img {
+  width: min(50%, 590px);
+}
+.workwithus .workwithuswrapper .workwithustexts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+}
+.workwithus .workwithuswrapper .workwithustexts h1 {
+  font-size: 64px;
+  font-weight: 700;
+  color: #FC653C;
+}
+.workwithus .workwithuswrapper .workwithustexts p {
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 150%;
+}
+.workwithus .workwithuswrapper .workwithustexts button {
+  padding: 16px 28px;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  background-color: #FC653C;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Cabinet Grotesk", sans-serif;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.workwithus .workwithuscirclegradient {
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #FC653C;
+  filter: blur(117.5px);
+}
+
+@media (min-width: 850px) and (max-width: 1150px) {
+  .workwithus {
+    min-height: 100vh;
+  }
+  .workwithus .workwithuswrapper {
+    width: 100%;
+  }
+  .workwithus .workwithuswrapper .workwithustexts h1 {
+    font-size: 50px;
+  }
+  .workwithus .workwithuswrapper .workwithustexts p {
+    font-size: 20px;
+  }
+  .workwithus .workwithuswrapper .workwithustexts button {
+    padding: 13px 25px;
+    font-size: 25px;
+  }
+}
+@media (max-width: 850px) {
+  .workwithus {
+    min-height: 100vh;
+    padding: 50px 0;
+  }
+  .workwithus .vector {
+    right: 0;
+    left: auto;
+  }
+  .workwithus .workwithuswrapper {
+    width: 80%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+  }
+  .workwithus .workwithuswrapper img {
+    width: 60%;
+  }
+  .workwithus .workwithuswrapper .workwithustexts {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .workwithus .workwithuswrapper {
+    gap: 50px;
+  }
+  .workwithus .workwithuswrapper .workwithustexts h1 {
+    font-size: 50px;
+  }
+  .workwithus .workwithuswrapper .workwithustexts p {
+    font-size: 20px;
+  }
+  .workwithus .workwithuswrapper .workwithustexts button {
+    padding: 13px 25px;
+    font-size: 25px;
+  }
+}
+.footer {
+  width: 100%;
+  min-height: 70vh;
+  background-color: white;
+  display: grid;
+  place-items: center;
+}
+.footer .footerwrapper {
+  width: 90%;
+}
+.footer .footerwrapper .footerheading {
+  height: 25vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footerwrapper .footercontents {
+  height: 45vh;
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=main.css.map */
