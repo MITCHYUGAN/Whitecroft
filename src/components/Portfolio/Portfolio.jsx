@@ -3,7 +3,7 @@ import arrowfront from "./Images/arrowfront.png"
 
 const Portfolio = () =>{
     return(
-        <section className="portfolio">
+        <section className="portfolio" id="portfolio">
             <h1 className="portfolioheadingtext">Portfolio</h1>
             <div className="portfoliosection">
             {

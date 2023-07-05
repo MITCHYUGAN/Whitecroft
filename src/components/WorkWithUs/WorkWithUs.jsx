@@ -3,7 +3,7 @@ import vector from "./Images/vector.png"
 
 const WorkWithUs = () => {
     return(
-        <section className="workwithus">
+        <section className="workwithus" id="workwithus">
             <img src={vector} className="vector" alt="" />
             <div className="workwithuswrapper">
                 <img src={img} alt="" />

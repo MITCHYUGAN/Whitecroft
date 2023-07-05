@@ -16,6 +16,7 @@
 
     .feeds{
         width: 90%;
+        max-width: 1250px;
         margin-top: 80px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);

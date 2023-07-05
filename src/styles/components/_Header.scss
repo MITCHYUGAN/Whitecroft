@@ -39,6 +39,11 @@
                     color: $black;
                     font-weight: $font-weigth-400;
                     font-size: $font-size-18;
+                    transition: 0.4s;
+                    cursor: pointer;
+                }
+                li a:hover{
+                    color: $main-color;
                 }
             }
         }

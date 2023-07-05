@@ -37,12 +37,13 @@
     .landing-contents{
         @extend %flex-items;
         width: 90%;
+        max-width: 1250px;
         justify-content: space-between;
         align-items: flex-end;
         gap: 30px;
 
         .landing-text{
-            width: min(531px, 50%);
+            width: min(530px, 50%);
 
             h1{
                 font-family: $font-cabinet-grotesk;

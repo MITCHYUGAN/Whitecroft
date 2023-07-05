@@ -2,7 +2,7 @@ import { AllServices } from "../Data/ServicesData"
 
 const Services = () => {
     return(
-        <section className="services">
+        <section className="services" id="services">
             <div className="servicesWrappr">
                 <div className="serviceHeader">
                     <h1>Services</h1>

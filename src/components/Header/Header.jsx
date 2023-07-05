@@ -1,5 +1,6 @@
 import React from "react"
 import logo from "./Images/Whitecroft.svg"
+import { Link } from "react-scroll"
 import { useState } from "react"
 
 const Header = () =>{
@@ -19,26 +20,30 @@ const Header = () =>{
     return(
         <header className="header">
             <div className="headerWrapper">
-            <img src={logo} alt="" />
+            <Link to="home" spy={true} smooth={true} offset={50} duration={500}>
+              <img src={logo} alt="" />   
+            </Link>
                 <nav className={openNav}>
                     <ul>
                         <li>
-                            <a href="/">Home</a>
+                            <Link to="home" spy={true} smooth={true} offset={50} duration={500}>Home</Link>
                         </li>
                         <li>
-                            <a href="#about">About us</a>
+                            <Link to="about" spy={true} smooth={true} offset={50} duration={500}>About us</Link>
                         </li>
                         <li>
-                            <a href="#services">Services</a>
+                            <Link to="services" spy={true} smooth={true} offset={50} duration={500}>Services</Link>
                         </li>
                         <li>
-                            <a href="#portfolio">Portfolio</a>
+                            <Link to="portfolio" spy={true} smooth={true} offset={50} duration={500}>Portfolio</Link>
                         </li>
                         <li>
-                            <a href="#clients">Clients</a>
+                            <Link to="clients" spy={true} smooth={true} offset={50} duration={500}>Clients</Link>
                         </li>
                     </ul>
-                    <button className="button">Work with us</button>
+                    <button className="button">
+                            <Link to="workwithus" spy={true} smooth={true} offset={50} duration={500}>Work with us</Link>
+                    </button>
                 </nav>
                 <i className={`bx ${menu}`} onClick={toggleNav}></i>
             </div>

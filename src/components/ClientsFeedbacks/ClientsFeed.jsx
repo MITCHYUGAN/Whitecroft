@@ -2,7 +2,7 @@ import { ClientsFeed } from "../Data/ClientsFeed"
 
 const ClientsFeeds = () => {
     return(
-        <section className="clientsfeeds">
+        <section className="clientsfeeds" id="clients">
             <h1 className="clientsfeedsheadingtext">What our Clients say</h1>
             <div className="feeds">
                 {

@@ -7,7 +7,7 @@ import dottedbox from "./Image/dottedbox.svg"
 
 const About = () => {
   return (
-    <section className='aboutsectionwrapper'>
+    <section className='aboutsectionwrapper' id='about'>
           <img src={circle1} className="circle1" alt="first circle"/>
           <img src={doublecircle} className="doublecircle" alt="double circle"/>
           <h1 className='aboutHeadingText'>About Us</h1>
